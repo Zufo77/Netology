@@ -11,8 +11,8 @@ Docker Compose version v2.32.4
 
 ## **4. Задача 3**  
 в виде решения приложены скриншоты:  
-[Screenshot_for_hw_3](hhttps://github.com/Zufo77/Netology/blob/main/05-virt-04-docker-in-practice/yrz_hw3.png)
-[Dockerfile.python](https://github.com/Zufo77/Netology/blob/main/05-virt-04-docker-in-practice/Dockerfile.python)
+[Screenshot_for_hw_3](https://github.com/Zufo77/Netology/blob/main/05-virt-04-docker-in-practice/yrz_hw3.png)  
+[Dockerfile.python](https://github.com/Zufo77/Netology/blob/main/05-virt-04-docker-in-practice/Dockerfile.python)  
 [compose.yaml](https://github.com/Zufo77/Netology/blob/main/05-virt-04-docker-in-practice/compose.yaml)
 
 
