@@ -4,19 +4,14 @@
 Docker Compose version v2.32.4
 
 ## **2. Задача 1**  
-в виде решения приложен скриншот:  
-[Screenshot_for_hw_3.2.1](https://github.com/Zufo77/Netology/blob/main/05-virt-03-docker-intro/Screenshot_for_hw_3.2.1.png)
+Dockerfile.python (https://github.com/Zufo77/Netology/blob/main/05-virt-04-docker-in-practice/Dockerfile.python)
 
-## **3. Задача 3**  
-в виде решения приложены скриншоты:  
-[Screenshot_for_hw_3.3.1](https://github.com/Zufo77/Netology/blob/main/05-virt-03-docker-intro/Screenshot_for_hw_3.3.1.png)  
-[Screenshot_for_hw_3.3.2](https://github.com/Zufo77/Netology/blob/main/05-virt-03-docker-intro/Screenshot_for_hw_3.3.2.png)  
-[Screenshot_for_hw_3.3.3](https://github.com/Zufo77/Netology/blob/main/05-virt-03-docker-intro/Screenshot_for_hw_3.3.3.png)  
+## **3. Задача 2**  
+со звездочкой не стал делать как не обязательную
 
-## **4. Задача 4**  
+## **4. Задача 3**  
 в виде решения приложены скриншоты:  
-[Screenshot_for_hw_3.4.1](https://github.com/Zufo77/Netology/blob/main/05-virt-03-docker-intro/Screenshot_for_hw_3.4.1.png)  
-[Screenshot_for_hw_3.4.2](https://github.com/Zufo77/Netology/blob/main/05-virt-03-docker-intro/Screenshot_for_hw_3.4.2.png)  
+[Screenshot_for_hw_3](hhttps://github.com/Zufo77/Netology/blob/main/05-virt-04-docker-in-practice/yrz_hw3.png  
 
 ## **5. Задача 5**   
 в виде решения приложены скриншоты:  
