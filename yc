@@ -1,0 +1,23 @@
+
+/home/yrz/Documents/22/my_command.txt
+/home/yrz/Documents/22/my_command.txt
+/home/yrz/Documents/22/my_command.txt
+
+
+ssh -i /home/yrz/github/my_sec_env/yckey yrz@158.160.159.250
+ssh -i /home/yrz/github/my_sec_env/yckey yrz@158.160.129.38
+ssh -i /home/yrz/github/my_sec_env/yckey yrz@130.193.35.22
+
+sudo apt update && sudo apt install -y docker.io
+sudo systemctl enable --now docker
+docker --version
+
+docker swarm init --advertise-addr 10.130.0.27
+docker swarm join --token SWMTKN-1-4ngeemqkq6hensufowia4qjh9htj1w1dfmgc29a91j0zs31tzv-4wff2l4ge0dpoxy8hi2frrccg 10.130.0.27:2377
+
+docker swarm join --token <TOKEN> 10.130.0.3:2377
+docker swarm join --token <TOKEN> 10.130.0.15:2377
+
+
+
+
