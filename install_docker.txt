@@ -1,0 +1,57 @@
+Привет! Вот актуальные команды для установки Docker и Docker Compose на Ubuntu (и другие дистрибутивы на основе Debian).
+
+1. Установка Docker
+bash
+Копировать
+Редактировать
+sudo apt update
+sudo apt install -y ca-certificates curl gnupg
+
+# Добавляем официальный GPG-ключ Docker
+sudo install -m 0755 -d /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo tee /etc/apt/keyrings/docker.asc > /dev/null
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+# Добавляем репозиторий Docker
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+# Обновляем пакеты и устанавливаем Docker
+sudo apt update
+sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+2. Проверяем установку Docker
+bash
+Копировать
+Редактировать
+sudo systemctl enable --now docker
+sudo docker version
+sudo docker info
+3. Установка Docker Compose (как плагина)
+После установки Docker, docker compose уже включен как встроенный плагин. Проверить можно так:
+
+bash
+Копировать
+Редактировать
+docker compose version
+4. (Опционально) Установка отдельного бинарного Docker Compose
+Если нужен отдельный бинарник:
+
+bash
+Копировать
+Редактировать
+DOCKER_COMPOSE_VERSION=$(curl -s https://api.github.com/repos/docker/compose/releases/latest | grep -oP '"tag_name": "\K[^"]+')
+sudo curl -L "https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+Проверяем:
+
+bash
+Копировать
+Редактировать
+docker-compose version
+Готово! Теперь Docker и Docker Compose установлены
+
+
+sudo systemctl enable --now docker
+sudo systemctl status docker
+

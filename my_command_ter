@@ -8,11 +8,11 @@ git clone https://github.com/netology-code/devops-materials
 git clone https://github.com/Zufo77/Netology
 
 git add .
-git commit -m "Домашние задания по модулю «Облачная инфраструктура. Terraform»"
+git commit -m "Задача 1 - «Облачная инфраструктура. Terraform»"
 git push origin main
 
 
-terraform -help
+dterraform -help
 terraform --version
 
 cd src
