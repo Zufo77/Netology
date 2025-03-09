@@ -1,0 +1,32 @@
+
+git add .
+git commit -m "Домашнее задание по занятию Оркестрация кластером Docker контейнеров на примере Docker Swarm."
+git push origin main
+
+git clone https://github.com/netology-code/ter-homeworks
+git clone https://github.com/netology-code/devops-materials
+git clone https://github.com/Zufo77/Netology
+
+git add .
+git commit -m "Домашние задания по модулю «Облачная инфраструктура. Terraform»"
+git push origin main
+
+
+terraform -help
+terraform --version
+
+cd src
+terraform init
+
+Terraform has been successfully initialized!
+
+cat .gitignore 
+
+terraform 
+Main commands:
+  init          Prepare your working directory for other commands
+  validate      Check whether the configuration is valid
+  plan          Show changes required by the current configuration
+  apply         Create or update infrastructure
+  destroy       Destroy previously-created infrastructure
+
