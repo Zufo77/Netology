@@ -5,7 +5,7 @@
 
 ## **1. Задача 1** 
 1.3. Секретное содержимое созданного ресурса random_password: "result": "B3ltvwrqVqq4tE4t"  
-1.5. [Изменения в "main.tf" приложены в комментариях в файле "main_14.txt"](https://github.com/Zufo77/Netology/blob/main/03-ter-homeworks/01/src/main_14.txt)  
+1.5. [Изменения в "main.tf" приложены в комментариях в файле "main_14.txt"](https://github.com/Zufo77/Netology/blob/main/03-ter-homeworks/01/main_14.txt)  
 1.5. [вывод команды "docker ps"](https://github.com/Zufo77/Netology/tree/main/03-ter-homeworks/01/Screenshot_for_HW02.png)  
 
 
