@@ -1,7 +1,7 @@
 # **Домашнее задание к занятию «Введение в Terraform»**
 
 ## **Чек-лист готовности к домашнему заданию*  
-[Скриншот команды "terraform --version"](https://github.com/Zufo77/Netology/tree/main/03-ter-homeworks/01/Screenshot for_HW01.png)
+[Скриншот команды "terraform --version"](https://github.com/Zufo77/Netology/tree/main/03-ter-homeworks/01/Screenshot_for_HW01.png)
 
 ## **1. Задача 1** 
 секретное содержимое созданного ресурса random_password: "result": "B3ltvwrqVqq4tE4t"
