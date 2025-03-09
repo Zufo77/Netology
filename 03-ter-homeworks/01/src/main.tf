@@ -8,7 +8,9 @@ terraform {
   required_version = ">=1.8.4" /*Многострочный комментарий.
  Требуемая версия terraform */
 }
-provider "docker" {}
+provider "docker" {
+  host = "unix:///var/run/docker.sock"
+}
 
 #однострочный комментарий
 
@@ -20,19 +22,19 @@ resource "random_password" "random_string" {
   min_numeric = 1
 }
 
-/*
-resource "docker_image" {
+
+resource "docker_image" "nginx" { /*добавил имя "nginx"*/
   name         = "nginx:latest"
   keep_locally = true
 }
 
-resource "docker_container" "1nginx" {
+resource "docker_container" "nginx_container" { /*имя не может начинаться с цифры - переименовал*/
   image = docker_image.nginx.image_id
-  name  = "example_${random_password.random_string_FAKE.resulT}"
+  name  = "example_${random_password.random_string.result}" /* изменил имя удалив FAKE и заменив большую "T" на маленькую "t" */
 
   ports {
     internal = 80
     external = 9090
   }
 }
-*/
+
