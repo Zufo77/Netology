@@ -6,11 +6,11 @@
 
 ## **Задание 1** 
 1.4. Исправлены в "main.tf" с указанем комментариев в тексте:  
-family = "ubuntu-2204-lts" #версия убунту не 2004 а 2204  
-hostname    = "netology-develop-platform-web" # добавил hostname  
-platform_id = "standard-v3" #"standart-v4"  
-type     = "network-hdd" #Добавил  
-size     = 10 #Добавил  
+        family = "ubuntu-2204-lts" #версия убунту не 2004 а 2204  
+        hostname    = "netology-develop-platform-web" # добавил hostname  
+        platform_id = "standard-v3" #"standart-v4"  
+        type     = "network-hdd" #Добавил  
+        size     = 10 #Добавил  
 
 1.5. [Скриншот консоли и ЛК Yandex Cloud с созданной ВМ, где видно внешний ip-адрес;](https://github.com/Zufo77/Netology/blob/main/03-ter-homeworks/02/Screenshot_for_HW2_1.png)  
 
