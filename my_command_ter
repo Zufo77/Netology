@@ -30,3 +30,52 @@ Main commands:
   apply         Create or update infrastructure
   destroy       Destroy previously-created infrastructure
 
+
+
+cloud_id b1gooocbmd3m5205tomu
+folder_id b1gg3o8ollsj16p6p5ng
+default_zone
+default_cidr
+
+
+service acc terraform ajel5shg1o9s7nau1ma2
+
+-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwErbIpW6oPlyiRM1IQ9J
+RSF4w2impQqDfXxtoa3EbnQBgCoH4aWVLxLzLgl0Mp7fdlrg/1cf6qi0vqDbdfkk
+YDfgrH4vDSyHAYtPxHV5iFgYdSvYsBYrDjzICTlBk4VhYqkQIcsmzj3zcGwlZ5QU
+c/UYnGkVKqSpVLWeCRxUl2YMJtjaAUhtLYsaWZec3PQTQahvPC6ikClQNJvYPXJc
+yDjXWVyUmDivipz0i0WyoAaXqK3hjs6T2+ncArMSk6GJ6UfqtTzaBtWbQQNp6hBU
+CAj/eNuIImJ9Og7ak8DmyIL1XtgLPXYaMHKKi5SAc31PSpfTy8AqaeMfXp2G+37s
+HwIDAQAB
+-----END PUBLIC KEY-----
+
+PLEASE DO NOT REMOVE THIS LINE! Yandex.Cloud SA Key ID <ajer2m7uphkit1ut9m02>
+-----BEGIN PRIVATE KEY-----
+MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDAStsilbqg+XKJ
+EzUhD0lFIXjDaKalCoN9fG2hrcRudAGAKgfhpZUvEvMuCXQynt92WuD/Vx/qqLS+
+oNt1+SRgN+Csfi8NLIcBi0/EdXmIWBh1K9iwFisOPMgJOUGThWFiqRAhyybOPfNw
+bCVnlBRz9RicaRUqpKlUtZ4JHFSXZgwm2NoBSG0tixpZl5zc9BNBqG88LqKQKVA0
+m9g9clzIONdZXJSYOK+KnPSLRbKgBpeoreGOzpPb6dwCsxKToYnpR+q1PNoG1ZtB
+A2nqEFQICP9424giYn06DtqTwObIgvVe2As9dhowcoqLlIBzfU9Kl9PLwCpp4x9e
+nYb7fuwfAgMBAAECggEAJU/BEoZkFq0gVMm10urg6DmU8bHCOB8AoZ49tZP+nAIF
+coV1TwrulhpCtmmeMt5R9OiwZMtWhZVjsOOMgeksbkEZZs77OT6tGZcbDL9QrCyP
+3lh6LLy4cQRJOkTyXPoSCe9NEomVR4qMzIEnhuAcUd26f0sCkOovcyDkf9cP8OpE
+4P5K6W9t+9Uza9v47dk8EkvZ1C32KKoAdSfyhlHeDxBplDhg/IP5x6hnFqXPyiQy
+oAzkGo1lA2ltxBgWTP6ZTC1wk6h6kzwflzTNeVvbmaQCUMKpN+uOqve6vaIrWAqX
+x0uUVCgh0K8XUe2MQ/tB0pqlhV11k9GCvJ+i6z8XlQKBgQD70vIsrqXQTY0Iw+ie
+xiEy7l84eF+OuNLp7g5+74K+0oEd8w3nR3ZhWgfXnnqX9/kweS+eUTT9GwUH8ZNN
+Lk2Bbwj2r+huFeHMEg0jFbawtEsvfbfpdcKV8AjhYq1JN2O24iyONq0teUCeqYzB
+9MNHuakM2htOi8MQnKzlO4atAwKBgQDDey8UzaQLMwzzYF4t+aFIy9V8ihi7MLo3
+3qVurbPwrkrUvD0eS2o3AYBu436liIl6JOyHZXhXNn3+dodPAHjq+sUDPPYpflSn
+kYReuN08v3trkhMAeH0va1ADIRga8Mb98r4yrUBnl0Iv/KBbFgDI+Hf/8g6cIFXb
+hUluJUUztQKBgBZOOA9HJP7Pb7egCsHNkPE+9gY9e1FcA6qe4H/T3UPjx3YMqmWb
+CdxTqjAqJHfDijoF8fbXAJeOxiJO/pouiMT3PdcD+9WMcKSv0KQT70u1nJdHTnwK
+Z0L6sP6ty+WZV2bCn+m05CAMBnJHWGVxtb5rrpKp2xNZA90704C2hhZbAoGATBTO
+jzc2KJG28aZJIXWt2ypSLcWFuJ1PbN0/3+LFTOBZCZE17GuHrF7uQLpUGVMZxqtG
+T7AjdTYlNXumUA4sAbCWKxt351Be3FUbgs5KdRFFlOlmceFzP5hxrLYdrqaVnFL0
+yb56eZb6ULjvJGRc69sgwUHRg9xl7iljGfZxh50CgYAFwZ7FW5LNu4abUguC/URV
+/KPUGcA6tXoV/uHu+/cIa/co1xOCFnp3GaoNcMQ3uQC3GLSSM4cFfDsyB14jtj79
+R70z1tEfak+FWXC8E5+Zbq/1XhNmh6CzIX9eGw5GLwWRt4JdTJFYMy3Pd4SS6j1Q
+eRqUO1zh29X5Ao9PgsjMBg==
+-----END PRIVATE KEY-----
