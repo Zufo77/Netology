@@ -2,6 +2,7 @@
 
 ## **Задание 1** 
 1.4. Исправлены в "main.tf" с указанем комментариев в тексте:  
+    
         family = "ubuntu-2204-lts" #версия убунту не 2004 а 2204  
         hostname    = "netology-develop-platform-web" # добавил hostname  
         platform_id = "standard-v3" #"standart-v4"  
