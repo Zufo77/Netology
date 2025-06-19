@@ -1,0 +1,114 @@
+
+
+recv sleep — соединение ничего не делает, ждет запроса от клиента (обычно приложение держит коннект открытым).
+cmd = awaiting command — сессия не выполняет команд, просто в ожидании (idle).
+
+для мониторинга
+select spid, loginname, status, command, hostname, program_name, last_batch 
+from master..sysprocesses
+where status = 'recv sleep' and command = 'awaiting command' and loginame = 'имя_тех_учетки'
+
+
+варинат аккуратно завершать по idle-времени:
+
+select spid, loginname, last_batch 
+from master..sysprocesses
+where status = 'recv sleep' and command = 'awaiting command'
+      and datediff(minute, last_batch, getdate()) > 30
+
+Потом 
+kill <spid>
+
+Скрипт: "Отстрел" зависших соединений
+--------------------------------------
+-- ЗАДАЙ ПАРАМЕТРЫ
+declare @tech_login varchar(30)
+declare @idle_minutes int
+
+select @tech_login = 'tech_user_login'  -- ← имя тех. учётки
+select @idle_minutes = 30               -- ← сколько минут соединение считается "зависшим"
+
+-- ВРЕМЕННАЯ ТАБЛИЦА 
+create table #to_kill (
+    spid int,
+    loginname varchar(30),
+    last_batch datetime,
+    program_name varchar(128),
+    hostname varchar(128)
+)
+
+-- ВЫБОРКА ПОДОЗРИТЕЛЬНЫХ СЕССИЙ
+insert into #to_kill
+select spid, loginame, last_batch, program_name, hostname
+from master..sysprocesses
+where status = 'recv sleep'
+  and cmd = 'AWAITING COMMAND'
+  and loginame = @tech_login
+  and datediff(minute, last_batch, getdate()) > @idle_minutes
+  and spid != @@spid  -- на всякий случай не убивать сам скрипт
+
+-- (ОПЦИОНАЛЬНО) ЛОГ
+select * from #to_kill
+
+-- УБИЙСТВО СЕССИЙ
+declare @spid int
+
+declare kill_cursor cursor for
+    select spid from #to_kill
+
+open kill_cursor
+fetch kill_cursor into @spid
+
+while @@sqlstatus = 0
+begin
+    print "Killing SPID: " + convert(varchar, @spid)
+    exec ('kill ' + convert(varchar, @spid))
+    fetch kill_cursor into @spid
+end
+
+close kill_cursor
+deallocate cursor kill_cursor
+
+drop table #to_kill
+------------
+
+Вариант 1
+Лог в отдельную таблицу в базе
+------------
+create table admin_db.dbo.killed_sessions_log (
+    log_id        int identity,
+    log_date      datetime default getdate(),
+    spid          int,
+    loginname     varchar(30),
+    last_batch    datetime,
+    program_name  varchar(128),
+    hostname      varchar(128),
+    killed_by     varchar(128) default suser_name()
+)
+
+
+Тогда в основном скрипте — до kill — логируем так:
+insert into admin_db.dbo.killed_sessions_log (spid, loginname, last_batch, program_name, hostname)
+select spid, loginname, last_batch, program_name, hostname
+from #to_kill
+------------
+
+Вариант 2:
+Лог в текстовый файл (через isql или sqsh)
+------------
+Если ты запускаешь скрипт из консоли (например, по cron), лог можно писать в файл:
+bash
+isql -U sa -P secret -S MY_SERVER -i kill_idle.sql -o /var/log/sybase_kill_idle.log
+
+Тогда в SQL-скрипте добавь print-выводы:
+print "=== KILL SCRIPT STARTED: " + convert(varchar, getdate())
+print "Found " + convert(varchar, @@rowcount) + " idle sessions to kill."
+-- внутри цикла:
+print "Killing SPID: " + convert(varchar, @spid)
+------------
+
+Вариант 3: 
+Лог в системный журнал (например, syslog, через middleware)
+------------
+
+------------
